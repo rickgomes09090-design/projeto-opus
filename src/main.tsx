@@ -1,14 +1,11 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { RouterProvider } from '@tanstack/react-router';
-import { router } from '@/router';
-import '@/styles.css';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from '@tanstack/react-router'
+import { router } from './router'
+import './styles.css'
 
-const container = document.getElementById('root');
-if (!container) throw new Error('Elemento raiz não encontrado.');
-
-createRoot(container).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-);
+  </React.StrictMode>,
+)

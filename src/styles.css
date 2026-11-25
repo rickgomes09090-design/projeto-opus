@@ -1,13 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-background: #f8fafc;
+  --color-foreground: #17243b;
+  --color-card: #ffffff;
+  --color-primary: #4338ca;
+  --color-primary-foreground: #ffffff;
+  --color-muted: #eef2ff;
+  --color-muted-foreground: #59677d;
+  --color-border: #e2e8f0;
+}
 
 @layer base {
   body {
-    @apply m-0 min-w-[320px] bg-background font-sans text-foreground antialiased;
+    @apply m-0 bg-background font-sans text-foreground antialiased;
   }
-
-  ::selection {
-    @apply bg-primary text-background;
+  button {
+    font: inherit;
   }
 }
